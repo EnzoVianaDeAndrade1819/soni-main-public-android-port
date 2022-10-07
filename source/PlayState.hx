@@ -1348,6 +1348,10 @@ class PlayState extends MusicBeatState
 		noteTypeMap = null;
 		eventPushedMap.clear();
 		eventPushedMap = null;
+		
+		#if android
+		addAndroidControls();
+		#end
 
 		// After all characters being loaded, it makes then invisible 0.01s later so that the player won't freeze when you change characters
 		// add(strumLine);
@@ -1440,6 +1444,11 @@ class PlayState extends MusicBeatState
 		timeBarBG.cameras = [camHUD];
 		timeTxt.cameras = [camHUD];
 		doof.cameras = [camHUD];
+		
+		#if android
+		addAndroidControls();
+		androidControls.visible = true;
+		#end
 
 		// if (SONG.song == 'South')
 		// FlxG.camera.alpha = 0.7;
