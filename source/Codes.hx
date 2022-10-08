@@ -136,7 +136,7 @@ class Codes extends MusicBeatState
                     FlxG.mouse.visible = false;
                     FlxG.sound.pause();
                     canSelect = false;
-					
+				{	
                         FlxG.sound.resume();
                         FlxG.mouse.visible = true;
                         canSelect = true;
@@ -146,7 +146,7 @@ class Codes extends MusicBeatState
                     FlxG.mouse.visible = false;
                     FlxG.sound.pause();
                     canSelect = false;
-					
+				{	
                         FlxG.sound.resume();
                         FlxG.mouse.visible = true;
                         canSelect = true;
