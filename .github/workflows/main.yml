@@ -6,9 +6,9 @@ name: buildAndroid
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ main ]
+    branches: [ notweuz-main ]
   pull_request:
-    branches: [ main ]
+    branches: [ notweuz-main ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -55,10 +55,9 @@ jobs:
           haxelib install flixel-ui
           haxelib install hscript
           haxelib install flixel-addons
-          haxelib git linc_luajit https://github.com/MAJigsaw77/linc_luajit
-          haxelib git extension-webview https://github.com/MatheusSilver/extension-webview --quiet
-          haxelib git extension-videoview https://github.com/MAJigsaw77/extension-videoview --quiet
-          haxelib git extension-androidtools https://github.com/MAJigsaw77/extension-androidtools
+          
+          haxelib git linc_luajit https://github.com/Sirox228/linc_luajit
+          
           haxelib list
 
       - name: Create Version Tag
@@ -85,3 +84,5 @@ jobs:
         with:
           name: Android Build
           path: export/release/android/bin/app/build/outputs/apk/debug
+ 
+          
